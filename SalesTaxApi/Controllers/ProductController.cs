@@ -75,7 +75,6 @@ namespace SalesTaxApi.Controllers
         /// <returns>Returns all products in db.</returns>
         /// <response code="200">Return all products in db</response>
         /// <response code="500">Internal server error when an error occurs during processing request</response>
-
         [HttpGet, Route("all-products")]
         public async Task<ActionResult<IEnumerable<ProductResponse>>> GetAllProductsAsync()
         {

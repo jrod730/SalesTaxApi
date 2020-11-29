@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using Contracts.Models;
+﻿using Contracts.Models;
 using Domain.Interfaces.Engines;
 using Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SalesTaxApi.Controllers
 {
@@ -87,7 +87,6 @@ namespace SalesTaxApi.Controllers
         /// <response code="201">Newly created receipt</response>
         /// <response code="400">Bad Request when request is null, empty, productId  is less than zero or quantity is less than zero</response>
         /// <response code="500">Internal server error when an error occurs during processing request</response>
-
         [HttpPost, Route("")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<string>> GetReceiptForCheckOutAsync(IEnumerable<ReceiptRequest> receiptRequest)

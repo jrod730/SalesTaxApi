@@ -30,7 +30,7 @@ namespace Engines
             var products = await _productRepository.GetAllProductsAsync().ConfigureAwait(false);
 
             //Real world application a sProc should be created to do the heavy lifting for matching the request ids to the database ids. 
-            //DataTable could be created and passed as type table param which can be joined on for data retrieval. Which should be more effecient .
+            //DataTable could be created and passed as type table param which can be joined on for data retrieval. Which should be more effecient.
             products = products.Where(p => receiptRequest.Any(r => r.ProductId == p.ProductId));
 
             CalculatePriceWithTax(products);
@@ -102,7 +102,7 @@ namespace Engines
         {
             try
             {
-                //Group request by productIds - Protect against users selecting multiple of same item.
+                //Group request by productIds
                 var receiptRequestGroupedByProductId = receiptRequest.GroupBy(r => r.ProductId)
                     .Select(grouping => new { ProductID = grouping.Key, ReceiptRequests = grouping.ToList() })
                     .ToList();
