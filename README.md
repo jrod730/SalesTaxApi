@@ -1,3 +1,5 @@
+![.NET Core](https://github.com/jrod730/SalesTaxApi/workflows/.NET%20Core/badge.svg)
+
 # SalesTaxApi
 An API that generates a string based receipt for given products. This project was created as exam for a job interview.
 
