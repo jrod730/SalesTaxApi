@@ -14,14 +14,6 @@ namespace Helpers
 
             return value;
         }
-
-        public static void ThrowIfNull(this string stringTargetObj, string parameterName)
-        {
-            if (string.IsNullOrWhiteSpace(stringTargetObj))
-            {
-                throw new ArgumentNullException(parameterName);
-            }
-        }
     }
 }
 
